@@ -1,20 +1,163 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=2]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_4_256.png" type="Texture" id=3]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_1_256.png" type="Texture" id=4]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_5_256.png" type="Texture" id=5]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_9_256.png" type="Texture" id=7]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_6_256.png" type="Texture" id=8]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_8_256.png" type="Texture" id=9]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_3_256.png" type="Texture" id=11]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_2_256.png" type="Texture" id=12]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric2.png" type="Texture" id=13]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_7_256.png" type="Texture" id=14]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric4.png" type="Texture" id=16]
+[ext_resource path="res://Assets/rigzsoft/Electric/Electric6.png" type="Texture" id=17]
+[ext_resource path="res://Assets/rigzsoft/Bubbles/bubble_10_256.png" type="Texture" id=18]
+[ext_resource path="res://Assets/rigzsoft/Electric/ElectricGroup1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare3.png" type="Texture" id=20]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare6.png" type="Texture" id=21]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare7.png" type="Texture" id=22]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare10.png" type="Texture" id=23]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare1.png" type="Texture" id=24]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare9.png" type="Texture" id=25]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare2.png" type="Texture" id=26]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare8.png" type="Texture" id=27]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare4.png" type="Texture" id=28]
+[ext_resource path="res://Assets/rigzsoft/Glows/Flare5.png" type="Texture" id=29]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 40.0
+angular_velocity = 28.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 1.0
+damping = 22.0
+angle = 45.0
+angle_random = 1.0
+color = Color( 0.866667, 0.894118, 1, 1 )
+
+[sub_resource type="AnimatedTexture" id=2]
+flags = 4
+frames = 11
+frame_1/texture = ExtResource( 4 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 12 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 11 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 3 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 5 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 8 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 14 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 9 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 7 )
+frame_9/delay_sec = 0.0
+frame_10/texture = ExtResource( 18 )
+frame_10/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=3]
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 24.83
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="AnimatedTexture" id=5]
+flags = 4
+frames = 10
+fps = 12.0
+frame_0/texture = ExtResource( 24 )
+frame_1/texture = ExtResource( 26 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 20 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 28 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 29 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 21 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 22 )
+frame_6/delay_sec = 0.0
+frame_7/texture = ExtResource( 27 )
+frame_7/delay_sec = 0.0
+frame_8/texture = ExtResource( 25 )
+frame_8/delay_sec = 0.0
+frame_9/texture = ExtResource( 23 )
+frame_9/delay_sec = 0.0
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="AnimatedTexture" id=7]
+flags = 4
+frames = 7
+fps = 8.0
+frame_0/texture = ExtResource( 15 )
+frame_1/texture = ExtResource( 13 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 6 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 16 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 10 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 17 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 19 )
+frame_6/delay_sec = 0.0
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Particles1" type="Particles2D" parent="."]
 position = Vector2( 128, 256 )
+scale = Vector2( 0.05, 0.05 )
+amount = 20
+lifetime = 5.0
+preprocess = 0.25
+speed_scale = 1.5
+explosiveness = 1.0
+process_material = SubResource( 1 )
+texture = SubResource( 2 )
+normal_map = SubResource( 3 )
 
 [node name="Particles2" type="Particles2D" parent="."]
 position = Vector2( 512, 256 )
+scale = Vector2( 0.3, 0.3 )
+lifetime = 133.26
+process_material = SubResource( 4 )
+texture = SubResource( 5 )
 
 [node name="Particles3" type="Particles2D" parent="."]
-position = Vector2( 896, 256 )
+position = Vector2( 894.328, 256 )
+scale = Vector2( 0.1, 0.1 )
+amount = 1
+explosiveness = 1.0
+process_material = SubResource( 6 )
+texture = SubResource( 7 )
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 512, 304 )
+current = true
 script = ExtResource( 1 )
